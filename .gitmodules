@@ -4,3 +4,12 @@
 [submodule "yolov3"]
 	path = ./ex2.4/yolov3
 	url = https://github.com/ultralytics/yolov3.git
+[submodule "ex2.5/CSK"]
+	path = ex2.5/CSK
+	url = https://github.com/hsjeong5/CSK.git
+[submodule "ex2.5/deep_sort"]
+	path = ex2.5/deep_sort
+	url = https://github.com/nwojke/deep_sort.git
+[submodule "ex2.4/Viola-Jones"]
+	path = ex2.4/Viola-Jones
+	url = https://github.com/Simon-Hohberg/Viola-Jones.git
