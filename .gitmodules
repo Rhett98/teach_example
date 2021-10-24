@@ -1,0 +1,6 @@
+[submodule "FasterRCNN-pytorch"]
+	path = ./ex2.4/FasterRCNN-pytorch
+	url = https://github.com/yingxingde/FasterRCNN-pytorch.git
+[submodule "yolov3"]
+	path = ./ex2.4/yolov3
+	url = https://github.com/ultralytics/yolov3.git
