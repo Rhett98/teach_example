@@ -1,5 +1,5 @@
 import cv2 as cv
-img = cv.imread("C:/Users/dell/Desktop/lena512color.png")
+img = cv.imread("./pic/lena512color.png")
 
 surf = cv.xfeatures2d.SURF_create(7000)
 

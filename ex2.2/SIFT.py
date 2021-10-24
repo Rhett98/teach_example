@@ -1,8 +1,8 @@
 import cv2
 import matplotlib.pyplot as plt
 
-img1 = cv2.cvtColor(cv2.imread('../ma1.jfif'), cv2.COLOR_BGR2GRAY)
-img2 = cv2.cvtColor(cv2.imread('../ma2.jfif'), cv2.COLOR_BGR2GRAY)
+img1 = cv2.cvtColor(cv2.imread('./pic/ma1.jfif'), cv2.COLOR_BGR2GRAY)
+img2 = cv2.cvtColor(cv2.imread('./pic/ma2.jfif'), cv2.COLOR_BGR2GRAY)
 
 sift = cv2.xfeatures2d.SIFT_create()
 
