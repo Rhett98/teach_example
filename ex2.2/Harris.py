@@ -1,11 +1,10 @@
 import numpy as np
 import cv2 as cv
 from matplotlib import pyplot as plt
-from copy import copy
 
 filename = './pic/checkerboard.png'
 origin_img = cv.imread(filename)
-img = copy(origin_img)
+img = origin_img.copy()
 gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 gray = np.float32(gray)
 dst = cv.cornerHarris(gray,2,3,0.04)

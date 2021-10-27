@@ -2,9 +2,11 @@
 
 #### 1.环境
 
-python3.6.9
+python==3.6.13
 
-opencv4.5.3
+opencv==3.4.1.15
+
+opencv-contrib-python==3.4.1.15
 
 #### 2.大纲
 ex2.1:图像滤波

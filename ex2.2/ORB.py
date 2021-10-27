@@ -1,7 +1,7 @@
 import cv2 as cv
 import matplotlib.pyplot as plt
-img1 = cv.imread('./pic/mayun1.png')
-img2 = cv.imread('./pic/mayun2.png')
+img1 = cv.imread('./pic/t1.png')
+img2 = cv.imread('./pic/t2.png')
 img1 = cv.cvtColor(img1, cv.COLOR_RGB2GRAY)
 img2 = cv.cvtColor(img2, cv.COLOR_RGB2GRAY)
 orb = cv.ORB_create()
