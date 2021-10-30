@@ -13,3 +13,6 @@
 [submodule "ex2.4/Viola-Jones"]
 	path = ex2.4/Viola-Jones
 	url = https://github.com/Simon-Hohberg/Viola-Jones.git
+[submodule "ex2.4/Faster_RCNN_pytorch"]
+	path = ex2.4/Faster_RCNN_pytorch
+	url = https://github.com/Jacqueline121/Faster_RCNN_pytorch.git

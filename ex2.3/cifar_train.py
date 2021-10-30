@@ -7,6 +7,12 @@ from    torch import nn, optim
 from    lenet5 import Lenet5
 from    resnet import ResNet18
 
+import ssl
+
+ssl._create_default_https_context = ssl._create_unverified_context
+
+torch.cuda.set_device(0)
+
 def main():
     batchsz = 128
 
@@ -38,14 +44,13 @@ def main():
     optimizer = optim.Adam(model.parameters(), lr=1e-3)
     print(model)
 
-    for epoch in range(1000):
+    for epoch in range(50):
 
         model.train()
         for batchidx, (x, label) in enumerate(cifar_train):
             # [b, 3, 32, 32]
             # [b]
             x, label = x.to(device), label.to(device)
-
 
             logits = model(x)
             # logits: [b, 10]
@@ -57,7 +62,6 @@ def main():
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
-
 
         print(epoch, 'loss:', loss.item())
 
@@ -85,7 +89,7 @@ def main():
             acc = total_correct / total_num
             print(epoch, 'test acc:', acc)
 
-
+    torch.save(model.state_dict(), './cifar')
 
 if __name__ == '__main__':
     main()
