@@ -36,3 +36,6 @@ while(1):
             break
     else:
         break
+# clean up the camera and close any open windows
+cap.release()
+cv.destroyAllWindows()
