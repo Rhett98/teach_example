@@ -1,12 +1,9 @@
 import numpy as np
 import cv2 as cv
-import argparse
-parser = argparse.ArgumentParser(description='This sample demonstrates the meanshift algorithm. \
-                                              The example file can be downloaded from: \
-                                              https://www.bogotobogo.com/python/OpenCV_Python/images/mean_shift_tracking/slow_traffic_small.mp4')
-parser.add_argument('image', type=str, help='path to image file')
-args = parser.parse_args()
-cap = cv.VideoCapture(args.image)
+import time
+
+sequence_path = "../video/ex1.mp4"
+cap = cv.VideoCapture(sequence_path)
 # 视频的第一帧
 ret,frame = cap.read()
 # 设置窗口的初始位置
@@ -26,7 +23,10 @@ while(1):
         hsv = cv.cvtColor(frame, cv.COLOR_BGR2HSV)
         dst = cv.calcBackProject([hsv],[0],roi_hist,[0,180],1)
         # 应用meanshift来获取新位置
+        t1 = time.time()
         ret, track_window = cv.meanShift(dst, track_window, term_crit)
+        t2 = time.time()
+        print('spend time:',t2-t1,'s')
         # 在图像上绘制
         x,y,w,h = track_window
         img2 = cv.rectangle(frame, (x,y), (x+w,y+h), 255,2)
